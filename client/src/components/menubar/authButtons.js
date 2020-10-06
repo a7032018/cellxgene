@@ -17,7 +17,7 @@ const Auth = React.memo((props) => {
       >
         <AnchorButton
           type="button"
-          data-testid="auth-button"
+          data-testid="log-in"
           disabled={false}
           href={!userinfo.is_authenticated ? auth.login : auth.logout}
         >
