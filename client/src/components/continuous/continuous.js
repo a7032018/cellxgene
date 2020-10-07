@@ -21,6 +21,7 @@ class Continuous extends React.PureComponent {
           col.type === "float64"
       )
       .filter((col) => col.name !== obsIndex)
+      .filter((col) => col.name !== "time_point") // skip -- this will be a single number -- not histogrammable
       .filter((col) => !col.writable) // skip user annotations - they will be treated as categorical
       .map((col) => col.name);
 
